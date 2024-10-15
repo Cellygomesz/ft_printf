@@ -6,7 +6,7 @@
 /*   By: mgomes-s <mgomes-s@42.rio>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:49:58 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/14 16:06:53 by mgomes-s         ###   ########.fr       */
+/*   Updated: 2024/10/14 21:07:24 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,24 @@ da string, exceto quando encontrar o símbolo %:*/
 
 int	ft_printf(const char *format, ...)
 {
-	size_t	i;
+	int		i;
 	char	*fmat;
 	int		result;
 
-	i = 0;
-	fmat = (char *)format;
-	while (fmat[i])
+	while (format[i])
 	{
-		result[i] =write(1, &fmat[i], 1);
-		i++;
+		if (format[i] != '%')
+		{
+			write(1, &format[i], 1);
+			count++;
+		}
+		else
+		{
+			i++;
+
+		}
 	}
-	return (result);
+	return ((int)result);
 }
 
 int	main(void)
