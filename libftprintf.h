@@ -6,7 +6,7 @@
 /*   By: mgomes-s <mgomes-s@42.rio>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:44:02 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/14 15:48:55 by mgomes-s         ###   ########.fr       */
+/*   Updated: 2024/10/14 21:14:10 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_PRINTF_H
 
 #include <unistd.h>
+#include <stdarg.h>
 
 int	ft_printf(const char *format, ...);
 
