@@ -6,102 +6,51 @@
 /*   By: mgomes-s <mgomes-s@42.rio>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:49:58 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/15 11:48:40 by mgomes-s         ###   ########.fr       */
+/*   Updated: 2024/10/15 15:29:51 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*mplemente uma função simples que apenas lida com a leitura de 
- * uma string e imprime o que não é %.*/
-/*
-#include "libftprintf.h"
+//#include "libftprintf.h"
+#include "libft.h"
+#include <unistd.h>
+#include <stdarg.h>
 
-char	wrt(void *string)
+int	ft_handle_conversion(char c, va_list args)
 {
-	int		i;
-	int		j;
-	char	*str;
-	char	*result;
-	
-	i = 0;
-	j = 0;
-	str = (char *)string;
-	while (str[i])
-	{
-		if (str[i] == '%')
-		{
-			while (str[i] == '%' && str[i] != ' ')
-				i++;
-		}
-		result[j] = write(1, &str[i], 1);
-		i++;
-		j++;
-	}
-	return (result);
+	if (c == 's')
+		return (ft_putstr_fd(va_arg(args, char *), 1));
+	else if (c == 'd' || c == 'i')
+		return (ft_putnbr_fd(va_arg(args, int), 1));
+	else if (c == 'c')
+		return (ft_putchar_fd(va_arg(args, int), 1));
+	else if (c == '%')
+		return (ft_putchar_fd('%'), 1);
+	return (0);
 }
 
-
-
-
-/*int	ft_printf(const char *format, ...)
+int	ft_printf(const char *format, ...)
 {
-	int		i;
-	char	*fmat;
-	int		result;
+	va_list	args;
+	int	i;
+	int	pchar;
 
+	i = 0;
+	pchar = 0;
+	va_start(args, format);
 	while (format[i])
 	{
-		if (format[i] != '%')
-		{
-			write(1, &format[i], 1);
-			count++;
-		}
+		if (format[i] == '%')
+			pchar += ft_handle_conversion(format[++i], args);
 		else
-		{
-			i++;
-
-		}
+			pchar += ft_putchar_fd(format[i], 1);
+		i++;
 	}
-	return ((int)result);
+	va_end(args);
+	return (pchar);
 }
 
-#include <stdio.h>
-int	main(void)
+int main(void)
 {
-	printf("%s\n", wrt("oi"));
+	ft_printf("Hello %s, we are in the year of %d", "Celly", 2024);
 	return (0);
-}*/
-
-
-#include <stdio.h>
-
-int  get_arg(va_list *ap, char c)
-{
-    if (c == '1')
-    return (printf("%s", va_arg(*ap, char *)));
-  if (c == '2')
-        return (printf("%d", va_arg(*ap, int)));
-  return (0);
-}
-
-void  printd(char *str, ...)
-{
-    va_list ap;
-  int      i;
-
-  i = 0;
-  va_start(ap, str);
-  while (str[i])
-  {
-    if (str[i] == '1' || str[i] == '2')
-      get_arg(&ap, str[i]);
-    else
-      printf("%c", str[i]);
-    i++;
-  }
-  va_end(ap);
-}
-
-int  main(void)
-{
-    printd("azul 1 de temperatura 2", "e uma cor", 6500);
 }
