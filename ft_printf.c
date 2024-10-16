@@ -6,25 +6,24 @@
 /*   By: mgomes-s <mgomes-s@42.rio>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:49:58 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/15 15:29:51 by mgomes-s         ###   ########.fr       */
+/*   Updated: 2024/10/16 15:24:42 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libftprintf.h"
-#include "libft.h"
-#include <unistd.h>
-#include <stdarg.h>
+#include "libftprintf.h"
 
 int	ft_handle_conversion(char c, va_list args)
 {
 	if (c == 's')
-		return (ft_putstr_fd(va_arg(args, char *), 1));
+		return (ft_putstr(va_arg(args, char *)));
 	else if (c == 'd' || c == 'i')
-		return (ft_putnbr_fd(va_arg(args, int), 1));
+		return (ft_putnbr(va_arg(args, int)));
 	else if (c == 'c')
-		return (ft_putchar_fd(va_arg(args, int), 1));
+		return (ft_putchar(va_arg(args, int)));
 	else if (c == '%')
-		return (ft_putchar_fd('%'), 1);
+		return (ft_putchar('%'));
+	else if (c == 'p')
+		return (/*|||||||||*/(va_arg(args, int)));
 	return (0);
 }
 
@@ -42,7 +41,7 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 			pchar += ft_handle_conversion(format[++i], args);
 		else
-			pchar += ft_putchar_fd(format[i], 1);
+			pchar += ft_putchar(format[i]);
 		i++;
 	}
 	va_end(args);
