@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgomes-s <mgomes-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/31 17:09:15 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/09/18 09:24:05 by mgomes-s         ###   ########.fr       */
+/*   Created: 2024/09/17 13:31:59 by mgomes-s          #+#    #+#             */
+/*   Updated: 2024/10/16 11:52:39 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putnbr(int n)
 {
-	int	i;
+	char	c;
+	int		pwords;
 
-	i = 0;
-	while (s[i])
+	pwords = 0;
+	if (n == -2147483648)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		write(1, "-2147483648", 11);
+		return (11);
 	}
+	else if (n < 0)
+	{
+		pwords += ft_putchar('-');
+		n = n * -1;
+	}
+	if (n >= 0 && n <= 9)
+	{
+		c = n + 48;
+		pwords += ft_putchar(c);
+	}
+	else
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	return (pwords);
 }

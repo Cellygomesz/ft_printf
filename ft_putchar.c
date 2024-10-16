@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgomes-s <mgomes-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 17:03:13 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/12 02:25:30 by mgomes-s         ###   ########.fr       */
+/*   Created: 2024/08/31 18:06:20 by mgomes-s          #+#    #+#             */
+/*   Updated: 2024/10/16 11:48:42 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_putchar(char c)
 {
-	while ((char)c != *s)
-	{
-		if (!*s)
-			return (0);
-		s++;
-	}
-	return ((char *)s);
+	write(1, &c, 1);
+	return (1);
 }
