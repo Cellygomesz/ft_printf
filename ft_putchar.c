@@ -6,11 +6,11 @@
 /*   By: mgomes-s <mgomes-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 18:06:20 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/16 11:48:42 by mgomes-s         ###   ########.fr       */
+/*   Updated: 2024/10/17 15:00:17 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c)
 {

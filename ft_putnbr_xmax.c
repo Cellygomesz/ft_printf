@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_xmax.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgomes-s <mgomes-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 13:31:59 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/17 15:00:28 by mgomes-s         ###   ########.fr       */
+/*   Created: 2024/10/17 13:05:44 by mgomes-s          #+#    #+#             */
+/*   Updated: 2024/10/17 15:00:20 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(int n)
+int	ft_putnbr_xmax(int n)
 {
 	char	c;
 	int		pwords;
@@ -33,10 +33,15 @@ int	ft_putnbr(int n)
 		c = n + 48;
 		pwords += ft_putchar(c);
 	}
+	else if (n >= 10 && n <= 15)
+	{
+		c = n + 55;
+		pwords += ft_putchar(c);
+	}
 	else
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		pwords += ft_putnbr_xmax(n / 16);
+		pwords += ft_putnbr_xmax(n % 16);
 	}
 	return (pwords);
 }

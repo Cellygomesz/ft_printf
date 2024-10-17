@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_decimal.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgomes-s <mgomes-s@42.rio>                 +#+  +:+       +#+        */
+/*   By: mgomes-s <mgomes-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:37:26 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/16 16:17:08 by mgomes-s         ###   ########.fr       */
+/*   Updated: 2024/10/17 15:00:05 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 unsigned int	ft_decimal(unsigned int n)
 {

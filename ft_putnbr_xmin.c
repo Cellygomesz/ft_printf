@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_xmin.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgomes-s <mgomes-s@42.rio>                 +#+  +:+       +#+        */
+/*   By: mgomes-s <mgomes-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:15:34 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/17 11:12:28 by mgomes-s         ###   ########.fr       */
+/*   Updated: 2024/10/17 15:00:24 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr_xmin(int n)
 {

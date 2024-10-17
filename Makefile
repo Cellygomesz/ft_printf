@@ -6,7 +6,7 @@
 #    By: mgomes-s <mgomes-s@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/12 11:48:16 by mgomes-s          #+#    #+#              #
-#    Updated: 2024/10/17 11:11:06 by mgomes-s         ###   ########.fr        #
+#    Updated: 2024/10/17 15:00:49 by mgomes-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,8 @@ SRC = ft_printf.c \
 	  ft_putstr.c \
 	  ft_decimal.c \
 	  ft_putnbr_xmin.c \
+	  ft_putnbr_xmax.c \
+	  ft_point.c
 
 OBJ = $(SRC:.c=.o)
 

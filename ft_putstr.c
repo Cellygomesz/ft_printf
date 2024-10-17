@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgomes-s <mgomes-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 17:09:15 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/16 11:54:25 by mgomes-s         ###   ########.fr       */
+/*   Updated: 2024/10/17 15:00:34 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int	ft_putstr_fd(char *s)
+int	ft_putstr(char *s)
 {
 	int	i;
 
 	i = 0;
+	if (s == NULL)
+		return (ft_putstr("(null)"));
 	while (s[i])
 	{
 		write(1, &s[i], 1);

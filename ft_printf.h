@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgomes-s <mgomes-s@42.rio>                 +#+  +:+       +#+        */
+/*   By: mgomes-s <mgomes-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:44:02 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/17 11:10:53 by mgomes-s         ###   ########.fr       */
+/*   Updated: 2024/10/17 14:59:41 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_PRINTF_H
-# define LIBFT_PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 #include <unistd.h>
 #include <stdarg.h>
@@ -22,5 +22,7 @@ int 			ft_putnbr(int n);
 int 			ft_putstr(char *s);
 unsigned int	ft_decimal(unsigned int n);
 int				ft_putnbr_xmin(int n);
+int				ft_putnbr_xmax(int n);
+int				ft_point(void *ptr);
 
 #endif
