@@ -6,7 +6,7 @@
 /*   By: mgomes-s <mgomes-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:31:59 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/17 15:00:28 by mgomes-s         ###   ########.fr       */
+/*   Updated: 2024/10/17 16:05:11 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int	ft_putnbr(int n)
 	}
 	else
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		pwords += ft_putnbr(n / 10);
+		pwords += ft_putnbr(n % 10);
 	}
 	return (pwords);
 }

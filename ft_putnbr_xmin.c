@@ -6,7 +6,7 @@
 /*   By: mgomes-s <mgomes-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:15:34 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/17 15:00:24 by mgomes-s         ###   ########.fr       */
+/*   Updated: 2024/10/17 16:24:23 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	ft_putnbr_xmin(int n)
 	pwords = 0;
 	if (n == -2147483648)
 	{
-		write(1, "-2147483648", 11);
-		return (11);
+		write(1, "ffffffff", 8);
+		return (8);
 	}
 	else if (n < 0)
 	{
