@@ -6,7 +6,7 @@
 /*   By: mgomes-s <mgomes-s@42.rio>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:49:58 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/16 15:36:29 by mgomes-s         ###   ########.fr       */
+/*   Updated: 2024/10/17 10:14:19 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_handle_conversion(char c, va_list args)
 	else if (c == '%')
 		return (ft_putchar('%'));
 	else if (c == 'u')
-		return (/*|||||||||*/(va_arg(args, int)));
+		return (ft_decimal(va_arg(args, int)));
 	return (0);
 }
 

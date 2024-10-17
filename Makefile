@@ -6,7 +6,7 @@
 #    By: mgomes-s <mgomes-s@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/12 11:48:16 by mgomes-s          #+#    #+#              #
-#    Updated: 2024/10/16 12:00:02 by mgomes-s         ###   ########.fr        #
+#    Updated: 2024/10/17 11:11:06 by mgomes-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,9 @@ NAME = libftprintf.a
 SRC = ft_printf.c \
 	  ft_putchar.c \
 	  ft_putnbr.c \
-	  ft_putstr.c
+	  ft_putstr.c \
+	  ft_decimal.c \
+	  ft_putnbr_xmin.c \
 
 OBJ = $(SRC:.c=.o)
 
