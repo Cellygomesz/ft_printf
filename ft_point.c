@@ -6,7 +6,7 @@
 /*   By: mgomes-s <mgomes-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:00:35 by mgomes-s          #+#    #+#             */
-/*   Updated: 2024/10/17 15:00:09 by mgomes-s         ###   ########.fr       */
+/*   Updated: 2024/10/18 10:04:05 by mgomes-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ static int	aux(unsigned long num)
 
 int	ft_point(void *ptr)
 {
-	int	len;
-	unsigned long adress;
+	int				len;
+	unsigned long	adress;
 
 	adress = (unsigned long)ptr;
 	len = 0;
