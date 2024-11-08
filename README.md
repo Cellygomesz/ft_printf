@@ -8,7 +8,7 @@
 <br>
 
 
-<p text align="center"> Para o projeto ft_printf da 42Rio, recriei a famosa função printf da biblioteca C, a `<stdio.h>`. </p>
+<p text align="center"> Para o projeto ft_printf da 42Rio, recriei a famosa função printf da biblioteca C, a stdio.h. </p>
 
 <br>
 
