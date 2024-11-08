@@ -1,13 +1,19 @@
 # 📖 Ft_printf
+<br>
 
-Para o projeto ft_printf da 42Rio, recriei a famosa função printf da biblioteca C, a `<stdio.h>`.
+<p align="center">
+  <img width="180" src="https://github.com/0bvim/42-project-badges/raw/main/badges/ft_printfe.png">
+</p>
 
 <br>
 
-<img width="345" src="https://media.tenor.com/5Q4cg4hXA9IAAAAM/nouns-dao.gif">
 
-### Conversões suportadas:
-`%`, `c`, `s`, `p`, `i`, `d`, `u`, `x` e `X`.
+<p text align="center"> Para o projeto ft_printf da 42Rio, recriei a famosa função printf da biblioteca C, a `<stdio.h>`. </p>
+
+<br>
+
+<p text align="center"> Conversões suportadas: </p>
+<p text align="center"> %, c, s, p, i, d, u, x e X. </p>
 
 <br>
 
